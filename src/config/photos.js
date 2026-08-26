@@ -1,7 +1,8 @@
 // Centralized photo configuration mapping to files in public/wedding_invitation_photo_placeholders/
 // Supports both .jpg, .png, .jpeg, and .webp extensions automatically
 
-const BASE_PATH = import.meta.env.BASE_URL || './';
+const rawBase = import.meta.env.BASE_URL || '/';
+const BASE_PATH = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 const formatPath = (path) => `${BASE_PATH}${path.startsWith('/') ? path.slice(1) : path}`;
 
 export const photos = {
