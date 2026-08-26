@@ -69,7 +69,7 @@ export default function AudioPlayer() {
 
   return (
     <div className="audio-player-fixed">
-      <audio ref={audioRef} src="/music/wedding-music.mp3" loop preload="none" />
+      <audio ref={audioRef} src={`${import.meta.env.BASE_URL || './'}music/wedding-music.mp3`} loop preload="none" />
       <button
         className={`audio-toggle-btn ${isPlaying ? 'playing' : ''}`}
         onClick={toggleAudio}
