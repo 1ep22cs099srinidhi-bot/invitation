@@ -1,0 +1,39 @@
+.floating-petals-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.floating-particle {
+  position: absolute;
+  bottom: -40px;
+  user-select: none;
+  opacity: 0;
+  animation: floatUp 16s linear infinite;
+  filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  85% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-petals-container {
+    display: none !important;
+  }
+}

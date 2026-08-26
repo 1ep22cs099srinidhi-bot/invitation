@@ -1,0 +1,169 @@
+.wedding-details-section {
+  padding: 3.5rem 1.25rem;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+}
+
+.wedding-details-section .section-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.wedding-details-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 2.5rem 1.5rem;
+}
+
+.card-top-motif {
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-cinzel);
+  font-size: 1.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-burgundy-dark);
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--color-gold-dark);
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.details-date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0 1.75rem;
+}
+
+.date-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.date-day {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-burgundy);
+  letter-spacing: 0.05em;
+}
+
+.date-full {
+  font-family: var(--font-cinzel);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: 0.1em;
+
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 1.25rem;
+  background: var(--bg-primary);
+  border-radius: 16px;
+  border: 1px solid var(--border-gold);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+}
+
+.detail-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--color-burgundy);
+  color: var(--color-gold-bright);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-family: var(--font-cinzel);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-gold-dark);
+}
+
+.detail-value {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-burgundy-dark);
+  line-height: 1.2;
+}
+
+.detail-subvalue {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.detail-separator-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--border-gold-solid), transparent);
+}
+
+.card-bottom-motif {
+  margin-top: 1.75rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .wedding-details-section .section-container {
+    max-width: 680px;
+  }
+
+  .details-grid {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.75rem 2rem;
+  }
+
+  .detail-separator-line {
+    width: 1px;
+    height: 60px;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+}

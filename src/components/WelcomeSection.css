@@ -1,0 +1,124 @@
+.welcome-section {
+  padding: 4.5rem 1.25rem 3.5rem;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.welcome-section .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Photo Styling */
+.welcome-photo-container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.welcome-photo-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-gold);
+  border: 4px solid #FFFFFF;
+  aspect-ratio: 3 / 4;
+}
+
+.welcome-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+.photo-inner-border {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+/* Text Card */
+.welcome-text-card {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-tag {
+  font-family: var(--font-cinzel);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--color-burgundy);
+  text-transform: uppercase;
+}
+
+.welcome-message {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  margin: 0.75rem 0 1.25rem;
+}
+
+.welcome-couple-names {
+  font-family: var(--font-script);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--color-burgundy-dark);
+  line-height: 1.1;
+  margin: 0.5rem 0 1rem;
+}
+
+.welcome-couple-names .ampersand {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-gold);
+  font-size: 2.2rem;
+}
+
+.welcome-blessing {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+}
+
+.welcome-seal {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .welcome-section .section-container {
+    max-width: var(--max-content-width);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .welcome-photo-container {
+    max-width: 420px;
+  }
+
+  .welcome-couple-names {
+    font-size: 3.75rem;
+  }
+
+  .welcome-message {
+    font-size: 1.3rem;
+  }
+}

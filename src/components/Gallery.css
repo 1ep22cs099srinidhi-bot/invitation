@@ -1,0 +1,135 @@
+.gallery-section {
+  padding: 4.5rem 1.25rem;
+  background-color: var(--bg-secondary);
+}
+
+.gallery-section .section-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.gallery-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-champagne);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+}
+
+.editorial-gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.gallery-item {
+  cursor: pointer;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-soft);
+  border: 3px solid #FFFFFF;
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item.featured-top {
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item.featured-bottom {
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-middle-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.gallery-item.middle-left,
+.gallery-item.middle-right {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(88, 17, 26, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #FFFFFF;
+  font-family: var(--font-cinzel);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-hover-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .gallery-section .section-container {
+    max-width: var(--max-content-width);
+  }
+
+  .editorial-gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+  }
+
+  .gallery-item.featured-top {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    aspect-ratio: auto;
+    height: 100%;
+  }
+
+  .gallery-middle-row {
+    display: contents;
+  }
+
+  .gallery-item.middle-left {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .gallery-item.middle-right {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .gallery-item.featured-bottom {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    aspect-ratio: auto;
+  }
+}
