@@ -45,7 +45,7 @@ export default function WeddingDetails() {
               <div className="detail-content">
                 <span className="detail-label">MUHURTHAM</span>
                 <span className="detail-value">{weddingData.wedding.muhurtham}</span>
-                <span className="detail-subvalue">({weddingData.wedding.muhurthamExact})</span>
+                <span className="detail-subvalue">Auspicious Time</span>
               </div>
             </div>
 

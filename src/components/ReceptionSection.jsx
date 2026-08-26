@@ -45,7 +45,6 @@ export default function ReceptionSection() {
           <div className="reception-time-box">
             <Clock size={18} color="var(--color-gold-bright)" />
             <span className="reception-time">{weddingData.reception.time}</span>
-            <span className="reception-time-sub">({weddingData.reception.timeExact})</span>
           </div>
 
           <p className="reception-note">
